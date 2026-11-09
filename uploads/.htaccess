@@ -1,0 +1,18 @@
+Options -Indexes
+
+<IfModule mod_authz_core.c>
+  <FilesMatch "(?i)\.(php|phtml|php3|php4|php5|phar|cgi|pl|exe)$">
+    Require all denied
+  </FilesMatch>
+  <FilesMatch "^sess_">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+  <FilesMatch "(?i)\.(php|phtml|php3|php4|php5|phar|cgi|pl|exe)$">
+    Deny from all
+  </FilesMatch>
+  <FilesMatch "^sess_">
+    Deny from all
+  </FilesMatch>
+</IfModule>

@@ -1,0 +1,39 @@
+{
+  "id": "./",
+  "name": "Clarenzon Warehouse",
+  "short_name": "Clarenzon WH",
+  "start_url": "./index.php",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#0B4F9C",
+  "theme_color": "#0B4F9C",
+  "description": "Warehouse Head and Admin mobile app for Clarenzon Medical Supplies. Scan, receive, stock-in, and monitor inventory.",
+  "icons": [
+    {
+      "src": "./assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

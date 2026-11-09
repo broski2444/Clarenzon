@@ -1,0 +1,282 @@
+/* ════════════════════════════════════════════════════════════════
+   MODULE 9: NOTIFICATIONS & ALERTS SYSTEM CSS
+   ════════════════════════════════════════════════════════════════ */
+
+/* Bell and badge layout in top bars */
+.topbar-icon-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    color: #6B7280;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.topbar-icon-btn:hover {
+    background-color: #F3F4F6;
+    color: #111827;
+}
+
+.sidebar-notif-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    margin-left: auto;
+    padding: 0 6px;
+    border-radius: 999px;
+    background: #ef4444;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    flex-shrink: 0;
+}
+.nav-group-toggle.has-sidebar-notif .nav-chevron {
+    margin-left: 8px;
+}
+.sidebar.collapsed .sidebar-notif-badge {
+    display: none;
+}
+.sidebar.collapsed .has-sidebar-notif > .nav-icon {
+    position: relative;
+}
+.sidebar.collapsed .has-sidebar-notif > .nav-icon::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ef4444;
+}
+
+.topbar-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #EF4444;
+    color: white;
+    border-radius: 50%;
+    min-width: 18px;
+    height: 18px;
+    padding: 2px;
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+/* Notification Dropdown Panel */
+.notification-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 350px;
+    max-width: calc(100vw - 24px);
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    padding: 16px;
+}
+.notification-dropdown.show {
+    display: block;
+}
+
+.notification-dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.notification-dropdown-header h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+}
+.notification-dropdown-header button {
+    font-size: 11px;
+    color: #4F46E5;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+.notification-dropdown-header button:hover {
+    text-decoration: underline;
+}
+
+.notification-list-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 285px;
+    overflow-y: auto;
+}
+.notification-list-menu::-webkit-scrollbar {
+    width: 6px;
+}
+.notification-list-menu::-webkit-scrollbar-thumb {
+    background-color: #E5E7EB;
+    border-radius: 3px;
+}
+
+/* Individual list item layout inside dropdown */
+.notification-list-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #F3F4F6;
+    align-items: flex-start;
+}
+.notification-list-item:hover {
+    background-color: #F9FAFB;
+}
+.notification-list-item.unread {
+    background-color: #EEF2FF;
+}
+.notification-list-item.unread:hover {
+    background-color: #E0E7FF;
+}
+
+/* Icon Wrappers for visual distinction */
+.notification-icon-wrapper {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+.notification-icon-wrapper.low_stock { background-color: #FEE2E2; color: #EF4444; }
+.notification-icon-wrapper.near_expiry { background-color: #FEF3C7; color: #D97706; }
+.notification-icon-wrapper.order_status { background-color: #E0F2FE; color: #0284C7; }
+.notification-icon-wrapper.pending_approval { background-color: #F3E8FF; color: #7C3AED; }
+
+.notification-item-content {
+    flex: 1;
+    min-width: 0;
+}
+.notification-item-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.notification-item-msg {
+    font-size: 12px;
+    color: #4B5563;
+    line-height: 1.4;
+    margin-bottom: 4px;
+    word-break: break-word;
+}
+.notification-item-time {
+    font-size: 10px;
+    color: #9CA3AF;
+}
+
+/* High-priority highlights */
+.notification-list-item.high-priority {
+    border-left: 3px solid #EF4444;
+}
+
+/* Central Notifications History Page styles */
+.notif-history-card {
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+.notif-history-row {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    border-bottom: 1px solid #F3F4F6;
+    align-items: flex-start;
+    transition: background-color 0.2s;
+}
+.notif-history-row:hover {
+    background-color: #F9FAFB;
+}
+.notif-history-row.unread {
+    background-color: #EEF2FF;
+}
+.notif-history-row.unread:hover {
+    background-color: #E0E7FF;
+}
+.notif-history-meta {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+.notif-history-body {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Form Settings for alerts days */
+.notif-settings-box {
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .notification-dropdown {
+        position: fixed;
+        top: 56px;
+        right: 12px;
+        left: 12px;
+        width: auto;
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+
+    .notification-dropdown-header,
+    .notif-history-meta {
+        flex-wrap: wrap;
+    }
+
+    .notification-item-title {
+        white-space: normal;
+    }
+
+    .notif-history-card {
+        padding: 16px;
+    }
+
+    .notif-history-row {
+        gap: 10px;
+        padding: 12px;
+    }
+}

@@ -1,0 +1,15 @@
+.git
+.claude
+.qodo
+.env
+.env.*
+db_config.local.php
+mail_config.local.php
+*.sql
+uploads/sessions/sess_*
+uploads/sessions/throttle_*
+uploads/logs/
+mobile-android/
+_wh_css_check.mjs
+_wh_dash_check.png
+node_modules

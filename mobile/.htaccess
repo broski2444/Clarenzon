@@ -1,0 +1,8 @@
+AddType application/manifest+json .webmanifest
+AddType application/vnd.android.package-archive .apk
+
+<IfModule mod_headers.c>
+  <Files "sw.js">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+  </Files>
+</IfModule>

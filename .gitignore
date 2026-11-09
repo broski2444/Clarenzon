@@ -1,0 +1,8 @@
+mail_config.local.php
+db_config.local.php
+uploads/sessions/sess_*
+uploads/sessions/throttle_*
+uploads/logs/
+*.sql
+.env
+.env.*

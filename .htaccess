@@ -1,0 +1,3 @@
+<FilesMatch "^(\.env.*|mail_config\.local\.php)$">
+    Require all denied
+</FilesMatch>

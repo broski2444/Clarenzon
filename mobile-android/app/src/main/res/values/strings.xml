@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Clarenzon Warehouse</string>
+    <string name="setup_title">Warehouse server</string>
+    <string name="setup_lead">This Android app opens the existing Clarenzon warehouse site. Enter the address of your Laragon / PHP server. Phone and PC must be on the same Wi‑Fi.</string>
+    <string name="setup_url_hint">http://192.168.1.45/CAPSTONE/mobile/index.php</string>
+    <string name="setup_save">Open warehouse app</string>
+    <string name="setup_emulator">Use emulator address (10.0.2.2)</string>
+    <string name="setup_lan">Use this PC’s Wi‑Fi address</string>
+    <string name="retry">Retry</string>
+    <string name="change_server">Change server</string>
+    <string name="load_error">Cannot reach the warehouse server. Start Apache in Laragon, keep the phone on the same Wi‑Fi, then retry.</string>
+    <string name="camera_needed">Camera permission is required to scan barcodes.</string>
+    <string name="scan_prompt">Scan a product or box barcode</string>
+</resources>

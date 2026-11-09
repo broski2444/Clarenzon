@@ -1,0 +1,119 @@
+/* Center every floating popup / overlay / alert for all roles.
+   Bootstrap .modal { position:fixed; top:0 } was pulling overlay cards to the top. */
+
+.modal-overlay.open:not([data-pr-pos="inline"]):not([data-so-pos="inline"]),
+.modal-overlay.show:not([data-pr-pos="inline"]):not([data-so-pos="inline"]),
+.modal-overlay[style*="display: flex"]:not([data-pr-pos="inline"]):not([data-so-pos="inline"]),
+.modal-overlay[style*="display:flex"]:not([data-pr-pos="inline"]):not([data-so-pos="inline"]) {
+  display: flex !important;
+  position: fixed !important;
+  inset: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 16px !important;
+  overflow: auto !important;
+  overscroll-behavior: contain;
+}
+
+.modal-overlay:not([data-pr-pos="inline"]):not([data-so-pos="inline"]) > .modal:not(.fade),
+.modal-overlay:not([data-pr-pos="inline"]):not([data-so-pos="inline"]) > .modal-box,
+.modal-overlay:not([data-pr-pos="inline"]):not([data-so-pos="inline"]) > .modal-content {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  inset: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: min(92vh, 900px) !important;
+  margin: auto !important;
+  transform: none !important;
+  float: none !important;
+  overflow: hidden !important;
+}
+
+.modal-overlay:not([data-pr-pos="inline"]):not([data-so-pos="inline"]) .modal-header,
+.modal-overlay:not([data-pr-pos="inline"]):not([data-so-pos="inline"]) .modal-footer,
+.modal.fade.show .modal-header,
+.modal.fade.show .modal-footer,
+.modal.show:not(.modal-overlay) .modal-header,
+.modal.show:not(.modal-overlay) .modal-footer {
+  flex-shrink: 0;
+}
+
+.modal-overlay:not([data-pr-pos="inline"]):not([data-so-pos="inline"]) .modal-body,
+.modal.fade.show .modal-body,
+.modal.show:not(.modal-overlay) .modal-body {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  flex: 1 1 auto;
+  min-height: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal.fade.show,
+.modal.show:not(.modal-overlay) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 16px !important;
+  overflow-y: auto !important;
+}
+
+.modal.fade.show .modal-dialog,
+.modal.show:not(.modal-overlay) .modal-dialog,
+.modal-dialog-centered {
+  display: flex !important;
+  align-items: stretch !important;
+  margin: auto !important;
+  max-height: calc(100vh - 32px) !important;
+  width: 100%;
+  transform: none !important;
+}
+
+.modal.fade.show .modal-content,
+.modal.show:not(.modal-overlay) .modal-content {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100%;
+  max-height: calc(100vh - 32px) !important;
+  overflow: hidden !important;
+}
+
+.swal2-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 16px !important;
+}
+.swal2-popup {
+  margin: auto !important;
+}
+
+.clar-float-toast {
+  position: fixed !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: 28px !important;
+  top: auto !important;
+  transform: translateX(-50%) !important;
+  z-index: 30000 !important;
+}
+
+@media (max-width: 768px) {
+  .modal-overlay.open:not([data-pr-pos="inline"]):not([data-so-pos="inline"]),
+  .modal-overlay.show:not([data-pr-pos="inline"]):not([data-so-pos="inline"]),
+  .modal.fade.show,
+  .modal.show:not(.modal-overlay) {
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 12px !important;
+  }
+  .modal-overlay:not([data-pr-pos="inline"]):not([data-so-pos="inline"]) > .modal:not(.fade) {
+    border-radius: 16px !important;
+    max-width: 100% !important;
+  }
+}

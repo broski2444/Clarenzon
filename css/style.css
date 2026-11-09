@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #f3f7fb;
+    /* fallback color */
+    background-image: url('../images/background.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+img,
+svg,
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    width: 100%;
+}
+
+.container,
+.card,
+.content-card,
+.table-container,
+.table-responsive,
+form,
+#list,
+#itemsArea {
+    max-width: 100%;
+}
+
+.system-table-scroll,
+.table-container,
+.table-responsive,
+.table-wrap,
+#list,
+#itemsArea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto !important;
+    overflow-y: auto;
+    max-height: calc(100vh - 220px);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-gutter: auto;
+    scrollbar-width: auto;
+    scrollbar-color: #64748b #e2e8f0;
+}
+
+.system-table-scroll::-webkit-scrollbar,
+.table-container::-webkit-scrollbar,
+.table-responsive::-webkit-scrollbar,
+.table-wrap::-webkit-scrollbar,
+#list::-webkit-scrollbar,
+#itemsArea::-webkit-scrollbar {
+    height: 14px;
+    width: 14px;
+}
+
+.system-table-scroll::-webkit-scrollbar-track,
+.table-container::-webkit-scrollbar-track,
+.table-responsive::-webkit-scrollbar-track,
+.table-wrap::-webkit-scrollbar-track,
+#list::-webkit-scrollbar-track,
+#itemsArea::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 8px;
+}
+
+.system-table-scroll::-webkit-scrollbar-thumb,
+.table-container::-webkit-scrollbar-thumb,
+.table-responsive::-webkit-scrollbar-thumb,
+.table-wrap::-webkit-scrollbar-thumb,
+#list::-webkit-scrollbar-thumb,
+#itemsArea::-webkit-scrollbar-thumb {
+    background: #64748b;
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+}
+
+.system-table-scroll > table,
+.table-container > table,
+.table-responsive > table,
+.table-wrap > table,
+#list > table,
+#itemsArea > table {
+    width: max-content;
+    min-width: 100%;
+}
+
+.container {
+    width: min(100% - 32px, 1100px);
+    margin: 0 auto;
+    padding: 24px 0;
+}
+
+td,
+th,
+p,
+h1,
+h2,
+h3,
+label {
+    overflow-wrap: anywhere;
+}
+
+.blur-bg {
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(6px);
+}
+
+.login-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 380px;
+    max-width: calc(100vw - 32px);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .3);
+}
+
+.logo {
+    width: 90px;
+    margin-bottom: 10px;
+}
+
+.login-card h2 {
+    margin: 10px 0;
+}
+
+.login-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+select,
+input,
+textarea {
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #8b8b91;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+td button,
+th button {
+    width: auto;
+    margin-top: 0;
+    white-space: normal;
+}
+
+button:hover {
+    background: #6f6f75;
+}
+
+@media (max-width: 767px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .login-card {
+        width: calc(100vw - 28px);
+        padding: 22px;
+    }
+
+    .container {
+        width: min(100% - 24px, 1100px);
+        padding: 18px 0;
+    }
+
+    table {
+        width: max-content;
+        min-width: 100%;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        max-width: 100%;
+    }
+
+    td,
+    th {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        width: min(100% - 16px, 1100px);
+    }
+
+    button {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

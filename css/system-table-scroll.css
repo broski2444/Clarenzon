@@ -1,0 +1,152 @@
+/* Reusable horizontal scroll for wide tables. Scroll the table container only. */
+.system-table-scroll,
+.table-container,
+.table-responsive,
+.table-wrap,
+.items-table-wrap,
+.items-wrap,
+.po-view-table-wrap,
+.pr-items-scroll,
+.receipt-items-scroll,
+.report-details-scroll,
+.damaged-items-scroll,
+.expired-items-scroll,
+.returned-items-scroll {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto !important;
+    overflow-y: auto;
+    max-height: calc(100vh - 220px);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-gutter: auto;
+    scrollbar-width: auto;
+    scrollbar-color: #64748b #e2e8f0;
+}
+
+.system-table-scroll::-webkit-scrollbar,
+.table-container::-webkit-scrollbar,
+.table-responsive::-webkit-scrollbar,
+.table-wrap::-webkit-scrollbar,
+.items-table-wrap::-webkit-scrollbar,
+.po-view-table-wrap::-webkit-scrollbar,
+.pr-items-scroll::-webkit-scrollbar,
+.receipt-items-scroll::-webkit-scrollbar,
+.report-details-scroll::-webkit-scrollbar,
+.damaged-items-scroll::-webkit-scrollbar,
+.expired-items-scroll::-webkit-scrollbar,
+.returned-items-scroll::-webkit-scrollbar {
+    height: 14px;
+    width: 14px;
+}
+
+.system-table-scroll::-webkit-scrollbar-track,
+.table-container::-webkit-scrollbar-track,
+.table-responsive::-webkit-scrollbar-track,
+.table-wrap::-webkit-scrollbar-track,
+.pr-items-scroll::-webkit-scrollbar-track,
+.receipt-items-scroll::-webkit-scrollbar-track,
+.report-details-scroll::-webkit-scrollbar-track,
+.damaged-items-scroll::-webkit-scrollbar-track,
+.expired-items-scroll::-webkit-scrollbar-track,
+.returned-items-scroll::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 8px;
+}
+
+.system-table-scroll::-webkit-scrollbar-thumb,
+.table-container::-webkit-scrollbar-thumb,
+.table-responsive::-webkit-scrollbar-thumb,
+.table-wrap::-webkit-scrollbar-thumb,
+.pr-items-scroll::-webkit-scrollbar-thumb,
+.receipt-items-scroll::-webkit-scrollbar-thumb,
+.report-details-scroll::-webkit-scrollbar-thumb,
+.damaged-items-scroll::-webkit-scrollbar-thumb,
+.expired-items-scroll::-webkit-scrollbar-thumb,
+.returned-items-scroll::-webkit-scrollbar-thumb {
+    background: #64748b;
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+}
+
+.system-table-scroll > table,
+.table-container > table,
+.table-responsive > table,
+.table-wrap > table,
+.items-table-wrap > table,
+.items-wrap > table,
+.po-view-table-wrap > table,
+.pr-items-scroll > table,
+.receipt-items-scroll > table,
+.report-details-scroll > table,
+.damaged-items-scroll > table,
+.expired-items-scroll > table,
+.returned-items-scroll > table {
+    width: max-content;
+    min-width: 100%;
+}
+
+.main-content,
+.content-wrapper,
+.card-body,
+.modal-body,
+.modal-overlay .modal-body,
+.modal-dialog,
+.modal-content {
+    min-width: 0;
+}
+
+.modal-overlay .modal-body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal-overlay .modal-body .system-table-scroll,
+.modal-overlay .modal-body .table-container,
+.modal-overlay .modal-body .table-responsive,
+.modal-overlay .modal-body .pr-items-scroll,
+.modal-overlay .modal-body .receipt-items-scroll,
+.modal-overlay .modal-body .po-view-table-wrap,
+.modal-overlay .modal-body .damaged-items-scroll,
+.modal-overlay .modal-body .expired-items-scroll,
+.modal-overlay .modal-body .returned-items-scroll,
+.modal-overlay .modal-body .report-details-scroll {
+    max-height: min(52vh, 480px);
+}
+
+/* Sales Order product combo menus must remain visible */
+#createSalesOrderModal .table-container,
+#createSalesOrderModal .system-table-scroll,
+#createSalesOrderModal .table-responsive {
+    overflow: visible !important;
+}
+
+@media print {
+    .system-table-scroll,
+    .table-container,
+    .table-responsive,
+    .table-wrap,
+    .items-table-wrap,
+    .items-wrap,
+    .po-view-table-wrap,
+    .pr-items-scroll,
+    .receipt-items-scroll,
+    .report-details-scroll,
+    .damaged-items-scroll,
+    .expired-items-scroll,
+    .returned-items-scroll {
+        overflow: visible !important;
+        scrollbar-gutter: auto;
+    }
+
+    .system-table-scroll > table,
+    .table-container > table,
+    .table-responsive > table,
+    .table-wrap > table,
+    .items-table-wrap > table,
+    .items-wrap > table {
+        width: 100%;
+        min-width: 0;
+    }
+}
